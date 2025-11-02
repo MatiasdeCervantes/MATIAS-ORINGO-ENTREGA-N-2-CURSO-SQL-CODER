@@ -139,7 +139,7 @@ DELIMITER ;
 ALTER TABLE promociones
 ADD COLUMN estado VARCHAR(20) DEFAULT 'NO ACTIVA';
 
-DELIMITER $$
+DELIMITER //
 
 CREATE TRIGGER tr_promocion_estado_insert
 BEFORE INSERT ON promociones
@@ -154,7 +154,7 @@ END$$
 
 DELIMITER ;
 
-DELIMITER $$
+DELIMITER //
 
 CREATE TRIGGER tr_promocion_estado_update
 BEFORE UPDATE ON promociones
