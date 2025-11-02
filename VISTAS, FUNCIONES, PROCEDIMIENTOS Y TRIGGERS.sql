@@ -19,12 +19,10 @@ BEGIN
     DECLARE v_pais VARCHAR(50);
     DECLARE resultado VARCHAR(50);
 
-    -- Obtenemos el país de la editorial según su id
     SELECT pais INTO v_pais
     FROM editoriales
     WHERE id_editorial = p_id_editorial;
 
-    -- Comprobamos si el país es Argentina
     IF LOWER(TRIM(v_pais)) = 'argentina' THEN
         SET resultado = 'Editorial local';
     ELSE
